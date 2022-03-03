@@ -1,15 +1,21 @@
 import React from 'react'
-import herobg from '../assets/img/hero-bg.jpg'
-import '../assets/css/style.css'
 import Header from "./boady";
 import Boady from "./navbar"
+import Aboutus from "./about";
+import Product from "./products";
+import Contactus from "./contact";
+import Address from "./footer";
 
 export default function Home() {
     return (
         <>
             <div>
-            <Boady/>
-            <Header/>
+                <Boady/>
+                <Header/>
+                <Aboutus/>
+                <Product/>
+                <Contactus/>
+                <Address/>
             </div>
         </>
     )

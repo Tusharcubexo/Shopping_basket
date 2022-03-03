@@ -1,50 +1,60 @@
 import React from 'react'
-
+import search_icon from "../assets/images/search_icon.png"
+import call from "../assets/icon/call.png"
+import email from "../assets/icon/email.png"
+import loc from "../assets/icon/loc.png"
+import logo from "../assets/images/logo.png"
 
 
 function Header() {
     return (
         <>
-            <div>
-                <header id="header" className="fixed-top">
-                    <div className="container d-flex align-items-center">
-                        <h1 className="logo me-auto"><a href="index.html">Mentor</a></h1>
-                        {/* Uncomment below if you prefer to use an image logo */}
-                        {/* <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>*/}
-                        <nav id="navbar" className="navbar order-last order-lg-0">
-                            <ul>
-                                <li><a className="active" href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="courses.html">Courses</a></li>
-                                <li><a href="trainers.html">Trainers</a></li>
-                                <li><a href="events.html">Events</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down" /></a>
-                                    <ul>
-                                        <li><a href="#">Drop Down 1</a></li>
-                                        <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i className="bi bi-chevron-right" /></a>
-                                            <ul>
-                                                <li><a href="#">Deep Drop Down 1</a></li>
-                                                <li><a href="#">Deep Drop Down 2</a></li>
-                                                <li><a href="#">Deep Drop Down 3</a></li>
-                                                <li><a href="#">Deep Drop Down 4</a></li>
-                                                <li><a href="#">Deep Drop Down 5</a></li>
+            <header>
+                <div className="header">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                                <div className="full">
+                                    <div className="center-desk">
+                                        <div className="logo">
+                                            <a href="index.html"><img src={logo} alt="#"/></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                                <div className="menu-area">
+                                    <div className="limit-box">
+                                        <nav className="main-menu">
+                                            <ul className="menu-area-main">
+                                                <li className="active"><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="brand.html">Brand</a></li>
+                                                <li><a href="special.html">Specials</a></li>
+                                                <li><a href="contact.html">Contact Us</a></li>
+                                                <li className="last">
+                                                    <a href="#"><img src={search_icon} alt="icon"/></a>
+                                                </li>
                                             </ul>
-                                        </li>
-                                        <li><a href="#">Drop Down 2</a></li>
-                                        <li><a href="#">Drop Down 3</a></li>
-                                        <li><a href="#">Drop Down 4</a></li>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 offset-md-6">
+                                <div className="location_icon_bottum">
+                                    <ul>
+                                        <li><img src={call}/>(+71)9876543109</li>
+                                        <li><img src={email}/>demo@gmail.com</li>
+                                        <li><img src={loc}/>Location</li>
                                     </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                            <i className="bi bi-list mobile-nav-toggle" />
-                        </nav>{/* .navbar */}
-                        <a href="courses.html" className="get-started-btn">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </header>{/* End Header */}
+                </div>
 
-            </div>
+            </header>
+
         </>
     )
 

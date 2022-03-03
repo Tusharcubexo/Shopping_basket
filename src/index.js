@@ -3,24 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './assets/css/style.css'
-import "./assets/vendor/animate.css/animate.min.css"
-import './assets/vendor/animate.css/animate.css'
-import './assets/vendor/animate.css/animate.compat.css'
-import './assets/vendor/bootstrap/css/bootstrap-grid.css'
-import './assets/vendor/bootstrap/css/bootstrap.min.css'
-import './assets/vendor/animate.css/animate.compat.css'
-import './assets/vendor/animate.css/animate.css'
-import './assets/vendor/bootstrap/css/bootstrap-grid.rtl.css'
-
-import "./assets/vendor/aos/aos.css" 
-import "./assets/vendor/bootstrap-icons/bootstrap-icons.css" 
-import "./assets/vendor/boxicons/css/boxicons.min.css" 
-import "./assets/vendor/remixicon/remixicon.css"
-import "./assets/vendor/swiper/swiper-bundle.min.css"
-
-
-
+import "./assets/css/style.css"
+import "./assets/css/responsive.css"
+import "./assets/css/meanmenu.css"
+import "./assets/css/normalize.css"
+import "./assets/css/slick.css"
+import "./assets/css/animate.min.css"
+import "./assets/css/nice-select.css"
+// import "./assets/css/jquery-ui.css"
+// import "./assets/css/bootstrap.min.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
