@@ -6,7 +6,7 @@ import loc from "../assets/icon/loc.png"
 import logo from "../assets/images/logo.png"
 
 
-function Header() {
+export default function Header() {
     return (
         <>
             <header>
@@ -29,7 +29,7 @@ function Header() {
                                             <ul className="menu-area-main">
                                                 <li className="active"><a href="index.html">Home</a></li>
                                                 <li><a href="about.html">About</a></li>
-                                                <li><a href="brand.html">Brand</a></li>
+                                                <li><a href="brand.html">Products</a></li>
                                                 <li><a href="special.html">Specials</a></li>
                                                 <li><a href="contact.html">Contact Us</a></li>
                                                 <li className="last">
@@ -60,4 +60,3 @@ function Header() {
 
 }
 
-export default Header;

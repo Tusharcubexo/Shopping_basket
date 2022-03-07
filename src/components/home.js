@@ -1,23 +1,24 @@
 import React from 'react'
-import Header from "./boady";
-import Boady from "./navbar"
+import Header from "./navbar";
+import Boady from "./boady"
 import Aboutus from "./about";
-import Product from "./products";
+import Product from "./brand";
 import Contactus from "./contact";
 import Address from "./footer";
 
-export default function Home() {
+function Home() {
     return (
         <>
             <div>
-                <Boady/>
-                <Header/>
-                <Aboutus/>
-                <Product/>
-                <Contactus/>
-                <Address/>
+                <Header />
+                <Boady />
+                <Aboutus />
+                <Product />
+                <Contactus />
+                <Address />
             </div>
         </>
     )
 }
 
+export default Home;
