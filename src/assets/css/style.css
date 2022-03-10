@@ -1861,7 +1861,9 @@ border-radius: 50px;
      padding: 17px 0px 0px 0px;
 }
 .red {
-     color: #ff0000;
+     color: #f83a3aee;
+     font-size: 23px;
+     
 }
 
 .brand-bg .brand_box span {

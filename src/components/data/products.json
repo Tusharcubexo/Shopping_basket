@@ -1,0 +1,45 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Samsung",
+            "prize": "9000",
+            "src": "a.png"
+            
+        },
+        {
+            "id": "2",
+            "name": "Nokia",
+            "prize": "15000",
+            "src": "b.png"
+        
+        },
+        {
+            "id": "3",
+            "name": "Apple",
+            "prize": "50000",
+            "src": "c.png"
+        },    
+        {
+            "id": "4",
+            "name": "Motorola",
+            "prize": "35000",
+            "src": "d.png"
+            
+        },
+        {
+            "id": "5",
+            "name": "HTC",
+            "prize": "20000",
+            "src": "e.png"
+            
+        },
+        {
+            "id": "6",
+            "name": "LG",
+            "prize": "10000",
+            "src": "f.png"
+            
+        }
+    ]
+}

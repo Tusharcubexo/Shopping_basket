@@ -17,7 +17,7 @@ export default function Header() {
                                 <div className="full">
                                     <div className="center-desk">
                                         <div className="logo">
-                                            <a href="index.html"><img src={logo} alt="#"/></a>
+                                            <a href="javascript:;"><img src={logo} alt="#"/></a>
                                         </div>
                                     </div>
                                 </div>
@@ -27,11 +27,11 @@ export default function Header() {
                                     <div className="limit-box">
                                         <nav className="main-menu">
                                             <ul className="menu-area-main">
-                                                <li className="active"><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="brand.html">Products</a></li>
-                                                <li><a href="special.html">Specials</a></li>
-                                                <li><a href="contact.html">Contact Us</a></li>
+                                                <li className="active"><a href="javascript:;">Home</a></li>
+                                                <li><a href="javascript:;">About</a></li>
+                                                <li><a href="javascript:;">Products</a></li>
+                                                <li><a href="javascript:;">Specials</a></li>
+                                                <li><a href="javascript:;">Contact Us</a></li>
                                                 <li className="last">
                                                     <a href="#"><img src={search_icon} alt="icon"/></a>
                                                 </li>
