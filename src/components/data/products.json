@@ -2,9 +2,16 @@
     "products": [
         {
             "id": "1",
-            "name": "Samsung",
+            "name": "Redmi Note 11S",
             "prize": "9000",
-            "src": "a.png"
+            "src": "a.png",
+            "details": "Redmi Note 11S (Space Black, 6GB RAM, 128GB Storage)|108MP AI Quad Camera | 90 Hz FHD+ AMOLED Display",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
             
         },
         {
@@ -12,34 +19,66 @@
             "name": "Nokia",
             "prize": "15000",
             "src": "b.png"
-        
         },
         {
             "id": "3",
             "name": "Apple",
             "prize": "50000",
             "src": "c.png"
-        },    
+        },
         {
             "id": "4",
             "name": "Motorola",
             "prize": "35000",
             "src": "d.png"
-            
         },
         {
             "id": "5",
             "name": "HTC",
             "prize": "20000",
             "src": "e.png"
-            
         },
         {
             "id": "6",
             "name": "LG",
             "prize": "10000",
             "src": "f.png"
-            
+        },
+        {
+            "id": "7",
+            "name": "Samsung",
+            "prize": "9000",
+            "src": "a.png"
+        },
+        {
+            "id": "8",
+            "name": "Nokia",
+            "prize": "15000",
+            "src": "b.png"
+        },
+        {
+            "id": "9",
+            "name": "Apple",
+            "prize": "50000",
+            "src": "c.png"
+        },
+        {
+            "id": "10",
+            "name": "Motorola",
+            "prize": "35000",
+            "src": "d.png"
+        },
+        {
+            "id": "11",
+            "name": "HTC",
+            "prize": "20000",
+            "src": "e.png"
+        },
+        {
+            "id": "12",
+            "name": "LG",
+            "prize": "10000",
+            "src": "f.png"
         }
     ]
 }

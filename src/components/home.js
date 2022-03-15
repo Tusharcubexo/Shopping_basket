@@ -10,12 +10,10 @@ function Home() {
     return (
         <>
             <div>
-                <Header />
                 <Boady />
                 <Aboutus />
                 <Product />
-                <Contactus />
-                <Address />
+                <Contactus />               
             </div>
         </>
     )
