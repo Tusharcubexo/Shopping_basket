@@ -60,7 +60,7 @@ export default function Product() {
                                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
 
                                             <div className="brand_box">
-                                                <Link to="/productDetails"><img src={product.src} alt="img" /></Link>
+                                                <Link to={`/productDetails/${product.id}`}><img src={product.img} alt="img" /></Link>
                                                 <p></p>
                                                 <span style={{ fontSize: "20px" }}>{product.name}</span>
                                                 <h3><strong className="red">&#8377;{product.prize}</strong></h3>

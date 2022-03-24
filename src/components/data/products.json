@@ -1,10 +1,10 @@
 {
     "products": [
         {
-            "id": "1",
+            "id": 1,
             "name": "Redmi Note 11S",
-            "prize": "9000",
-            "src": "a.png",
+            "prize": 9000,
+            "img": "a.png",
             "details": "Redmi Note 11S (Space Black, 6GB RAM, 128GB Storage)|108MP AI Quad Camera | 90 Hz FHD+ AMOLED Display",
             "Colour": "Space Black",
             "Rom": "128GB",
@@ -15,70 +15,148 @@
             
         },
         {
-            "id": "2",
-            "name": "Nokia",
-            "prize": "15000",
-            "src": "b.png"
+            "id": 2,
+            "name": "Samsung Galaxy M12 ",
+            "prize": 10499.00,       
+            "img": "b.png",
+            "details": "Samsung Galaxy M12 (White,4GB RAM, 64GB Storage) 6000 mAh with 8nm Processor | True 48 MP Quad Camera | 90Hz Refresh Rate",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "3",
-            "name": "Apple",
-            "prize": "50000",
-            "src": "c.png"
+            "id": 3,
+            "name": "Redmi 9A",
+            "prize": 100000,
+            "img": "c.png",
+            "details": "Redmi 9A(Midnight Black 3GB RAM 32GB Storage) | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery ",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "4",
-            "name": "Motorola",
-            "prize": "35000",
-            "src": "d.png"
+            "id": 4,
+            "name": "Redmi 9A",
+            "prize": 8299.00,
+            "img": "d.png",
+            "details": "Redmi 9A (Nature Green, 3GB Ram, 32GB Storage) | 2GHz Octa-core Helio G25 Processor",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "5",
-            "name": "HTC",
-            "prize": "20000",
-            "src": "e.png"
+            "id": 5,
+            "name": "Tecno Spark 8T",
+            "prize": 9899.00,
+            "img": "e.png",
+            "details": "Tecno Spark 8T (Atlantic Blue,7GB Expandable RAM, 64GB Storage)| 50MP AI Camera | 6.6 FHD+Display | 5000mAh ",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "6",
-            "name": "LG",
-            "prize": "10000",
-            "src": "f.png"
+            "id": 6,
+            "name": "Samsung Galaxy M32",
+            "prize": 16999.00,
+            "img": "f.png",
+            "details": "Samsung Galaxy M32 (Light Blue, 6GB RAM, 128GB Storage) 6 Months Free Screen Replacement for Prime ",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "7",
-            "name": "Samsung",
-            "prize": "9000",
-            "src": "a.png"
+            "id": 7,
+            "name": "Nokia C01",
+            "prize":  6198.00
+            ,
+            "img": "a.png",
+            "details": "Nokia C01 Plus 4G, 5.45” HD+ Screen, Selfie Camera with Front Flash (Grey)",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "8",
-            "name": "Nokia",
-            "prize": "15000",
-            "src": "b.png"
+            "id": 8,
+            "name": "Redmi Note 10 Pro",
+            "prize": 16999.00,
+            "img": "b.png",
+            "details": "Redmi Note 10 Pro (Glacial Blue, 6GB RAM, 128GB Storage) -120hz Super Amoled Display|64MP with 5mp Super Tele- Macro ",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "9",
-            "name": "Apple",
-            "prize": "50000",
-            "src": "c.png"
+            "id": 9,
+            "name": "OnePlus Nord 2",
+            "prize": 29999.00,
+            "img": "c.png",
+            "details": "OnePlus Nord 2 5G (Gray Sierra, 8GB RAM, 128GB Storage) ",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "10",
-            "name": "Motorola",
-            "prize": "35000",
-            "src": "d.png"
+            "id": 10,
+            "name": "Apple iPhone 12",
+            "prize": 56990.00,
+            "img": "d.png",
+            "details": "Apple iPhone 12 (64GB) - Green ",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "11",
-            "name": "HTC",
-            "prize": "20000",
-            "src": "e.png"
+            "id": 11,
+            "name": "Apple iPhone 13",
+            "prize": 74900.00,
+            "img": "e.png",
+            "details": "Apple iPhone 13 (128GB) - Midnight ",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         },
         {
-            "id": "12",
-            "name": "LG",
-            "prize": "10000",
-            "src": "f.png"
+            "id": 12,
+            "name": "OnePlus Nord CE 2",
+            "prize": 24999.00,
+            "img": "f.png",
+            "details": "OnePlus Nord CE 2 5G (Bahamas Blue, 8GB RAM, 128GB Storage)",
+            "Colour": "Space Black",
+            "Rom": "128GB",
+            "Ram":"6GB",
+            "camera": "108MP AI Quad Camera",
+            "processor": "MediaTek Helio G96 Octa-core processor",
+            "Display": "90 Hz FHD+ AMOLED Display"
         }
     ]
 }
