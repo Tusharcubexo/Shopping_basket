@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "./navbar";
 import Boady from "./boady"
 import Aboutus from "./about";
-import Product from "./brand";
+import Productbrand from "./brand";
 import Contactus from "./contact";
 import Address from "./footer";
 
@@ -12,7 +12,7 @@ function Home() {
             <div>
                 <Boady />
                 <Aboutus />
-                <Product />
+                <Productbrand />
                 <Contactus />               
             </div>
         </>

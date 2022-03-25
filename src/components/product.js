@@ -1,31 +1,34 @@
 import { contains } from 'jquery';
 import { useParams } from 'react-router-dom';
 import '../assets/css/style-pd.css';
-import a from '../assets/images/a.png'
 import data from "./data/products.json"
+import Images from './img';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRupeeSign } from '@fortawesome/fontawesome-free-solid'
 
 export default function Phonedetails() {
     // const [proddetails, setProddetails] = useState([]);
     // setProddetails(data.map(product => {
     // console.log(proddetails)
     // }))
-    const {productid} = useParams()
+    const { productid } = useParams()
     // toString(productid)
-    console.log(typeof(productid));
+    console.log(typeof (productid));
     console.log(productid);
 
     // console.log(data.products.map(vale=>{
     //     return vale.name
     // }))
-    function pId() {
-        data.products.map(vale => {
-            if (vale.id == productid) {
-                console.log(vale.id);
-                console.log(productid);
-            }
-        })
-    }
-    pId();
+    // function pId() {
+    //     data.products.map(vale => {
+    //         if (vale.id == productid) {
+    //             console.log(vale.id);
+    //             console.log(productid);
+    //         }
+    //     })
+    // }
+    // pId();
 
 
     return (
@@ -34,26 +37,27 @@ export default function Phonedetails() {
                 {/* Left Column / Headphones Image */}
                 {
                     data.products
-                    .filter(vale=>vale.id==productid)
-                    .map(vale => {
+                        .filter(vale => vale.id == productid)
+                        .map(vale => {
 
-                        return (
-                            <>
-                                <div className="left-column"> 
-                                    <img data-image="red" className="active" src={vale.img} alt='img' />
-                                </div>
-                                {/* Right Column */}
-                                <div className="right-column">
-                                    {/* Product Description */}
-                                    <div className="product-description">
-                                        <span>Smart Phones</span>
-                                        <h1>{vale.name}</h1>
-                                        <p>{vale.details}</p>
+                            return (
+                                <>
+                                    <div className="left-column">
+                                        <Images pic={vale.img} />
+                                        {/* <img data-image="red" className="active" src={vale.img} alt='img' /> */}
                                     </div>
-                                    {/* Product Configuration */}
-                                    <div className="product-configuration">
-                                        {/* Product Color */}
-                                        {/* <div className="product-color">
+                                    {/* Right Column */}
+                                    <div className="right-column">
+                                        {/* Product Description */}
+                                        <div className="product-description">
+                                            <span>Smart Phones</span>
+                                            <h1>{vale.name}</h1>
+                                            <p>{vale.details}</p>
+                                        </div>
+                                        {/* Product Configuration */}
+                                        <div className="product-configuration">
+                                            {/* Product Color */}
+                                            {/* <div className="product-color">
                             <span>Color</span>
                             <div className="color-choose">
                                 <div>
@@ -70,26 +74,28 @@ export default function Phonedetails() {
                                 </div>
                             </div>
                         </div> */}
-                                        {/* Cable Configuration */}
-                                        <div className="cable-config">
-                                            <span>Cable configuration</span>
-                                            <div className="cable-choose">
-                                                <button>Straight</button>
-                                                <button>Coiled</button>
-                                                <button>Long-coiled</button>
+                                            {/* Cable Configuration */}
+                                            <div className="cable-config">
+                                                <span>Cable configuration</span>
+                                                <div className="cable-choose">
+                                                    <button>Straight</button>
+                                                    <button>Coiled</button>
+                                                    <button>Long-coiled</button>
+                                                </div>
+                                                <a href="#">How to configurate your headphones</a>
                                             </div>
-                                            <a href="#">How to configurate your headphones</a>
+                                        </div>
+                                        {/* Product Pricing */}
+                                        <div className="product-price">
+                                            <span>
+                                                <FontAwesomeIcon icon="rupee-sign" size="8px" />
+                                                {vale.prize}</span>
+                                            <a href="#" className="cart-btn">Add to cart</a>
                                         </div>
                                     </div>
-                                    {/* Product Pricing */}
-                                    <div className="product-price">
-                                        <span>&#8377;{vale.prize}</span>
-                                        <a href="#" className="cart-btn">Add to cart</a>
-                                    </div>
-                                </div>
-                            </>
-                        )
-                    })
+                                </>
+                            )
+                        })
                 }
             </main>
 

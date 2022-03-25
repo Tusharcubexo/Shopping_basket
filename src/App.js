@@ -15,6 +15,8 @@ import Address from "./components/footer";
 import { Brandpage, Productpage } from "./components/brand";
 import { Contactuspage } from "./components/contact";
 import Phonedetails from "./components/product";
+import Signup  from "./components/loginsignup";
+import { Login } from "./components/loginsignup";
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
                     <Route path="/about" element={<Aboutpage />} />
                     <Route path="/products" element={<Productpage />} />
                     <Route path="/contactus" element={<Contactuspage />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />              
                     <Route path="/productDetails/:productid" element={<Phonedetails />} />
 
                 </Routes>

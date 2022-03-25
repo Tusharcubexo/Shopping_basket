@@ -3,8 +3,14 @@ import ReactDOM from 'react-dom';
 import data from "./data/products.json"
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import star from "../assets/images/star.png"
 
-export default function Product() {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faIndianRupee } from '@fortawesome/free-solid-svg-icons'
+// import { faIndianRupeeSign } from '@fortawesome/free-solid-svg-icons'
+import { faRupeeSign } from '@fortawesome/fontawesome-free-solid'
+
+export default function Productbrand() {
     const [stock, setStock] = useState(6);
     // const [more_btn, setStock] = useState(6);
     const [pd, setPd] = useState([]);
@@ -23,20 +29,17 @@ export default function Product() {
             // pd = ;
             setPd((data.products).slice(0, stock))
             // console.log(pd.length);
-            
+
 
         }
     }, [stock]);
-    console.log(pd)   
-    function newset(){
-        for(var i = 0; i<pd.length; i++){
+    console.log(pd)
+    function newset() {
+        for (var i = 0; i < pd.length; i++) {
             console.log(pd.details.phoneBrand);
         }
 
     }
-    
-
-
 
     return (
         <>
@@ -63,7 +66,10 @@ export default function Product() {
                                                 <Link to={`/productDetails/${product.id}`}><img src={product.img} alt="img" /></Link>
                                                 <p></p>
                                                 <span style={{ fontSize: "20px" }}>{product.name}</span>
-                                                <h3><strong className="red">&#8377;{product.prize}</strong></h3>
+                                                <h3><strong className="red" style={{}}>
+                                                    {/* <FontAwesomeIcon icon='indian-rupee' /> */}
+                                                    <FontAwesomeIcon icon="rupee-sign" size="8px" />
+                                                    {product.prize}</strong></h3>
                                             </div>
                                         </div>
                                     )
@@ -132,26 +138,34 @@ export function Productpage() {
                         </div>
                     </div>
                 </div>
-              
+
                 <div className="brand">
                     <div className="container">
                     </div>
                     <div className="brand-bg">
                         <div className="container">
                             <div className="row">
-                            {}
-                                <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                                    <div className="brand_box">
-                                        <img src="images/1.png" alt="img" />
-                                        <h3>$<strong className="red">100</strong></h3>
-                                        <span>Mobile Phone</span>
-                                        <i><img src="images/star.png" /></i>
-                                        <i><img src="images/star.png" /></i>
-                                        <i><img src="images/star.png" /></i>
-                                        <i><img src="images/star.png" /></i>
-                                    </div>
-                                </div>
-                                <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
+                                {data.products.map(vale => {
+                                    return (
+                                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
+                                            <div className="brand_box">
+                                                {/* <img src={vale.img} alt="img" /> */}
+                                                <Link to={`/productDetails/${vale.id}`}><img src={vale.img} alt="img" /></Link>
+                                                <h3><strong className="red">
+                                                <FontAwesomeIcon icon="rupee-sign" size="8px" />
+                                                {vale.prize}</strong></h3>
+                                                <span>{vale.name}</span>
+                                                <i><img src={star} /></i>
+                                                <i><img src={star} /></i>
+                                                <i><img src={star} /></i>
+                                                <i><img src={star} /></i>
+                                            </div>
+                                        </div>
+
+                                    )
+                                })}
+
+                                {/* <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                                     <div className="brand_box">
                                         <img src="images/2.png" alt="img" />
                                         <h3>$<strong className="red">100</strong></h3>
@@ -205,7 +219,7 @@ export function Productpage() {
                                         <i><img src="images/star.png" /></i>
                                         <i><img src="images/star.png" /></i>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="col-md-12">
                                     <a className="read-more">See More</a>
                                 </div>
