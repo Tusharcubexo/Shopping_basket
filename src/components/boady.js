@@ -1,5 +1,6 @@
 import React from 'react'
 import banner from "../assets/images/banner.jpg"
+import { Link } from 'react-router-dom'
 
 function Boady() {
     return (
@@ -15,7 +16,8 @@ function Boady() {
                                     <h1>up to 25% Flat Sale</h1>
                                     <p>It is a long established fact that a reader will be distracted by the readable content
                                         <br /> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-                                    <a className="buynow" href="#">Buy Now</a>
+                                    
+                                    <Link className="buynow" to="/products">See now</Link>
                                     <ul className="social_icon">
                                         <li> <a href="#"><i className="fa fa-facebook-f" /></a></li>
                                         <li> <a href="#"><i className="fa fa-twitter" /></a></li>

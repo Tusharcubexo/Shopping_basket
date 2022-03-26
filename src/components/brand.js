@@ -65,7 +65,7 @@ export default function Productbrand() {
                                             <div className="brand_box">
                                                 <Link to={`/productDetails/${product.id}`}><img src={product.img} alt="img" /></Link>
                                                 <p></p>
-                                                <span style={{ fontSize: "20px" }}>{product.name}</span>
+                                                <span style={{ fontSize: "16px" }}>{product.name}</span>
                                                 <h3><strong className="red" style={{}}>
                                                     {/* <FontAwesomeIcon icon='indian-rupee' /> */}
                                                     <FontAwesomeIcon icon="rupee-sign" size="8px" />
@@ -152,8 +152,8 @@ export function Productpage() {
                                                 {/* <img src={vale.img} alt="img" /> */}
                                                 <Link to={`/productDetails/${vale.id}`}><img src={vale.img} alt="img" /></Link>
                                                 <h3><strong className="red">
-                                                <FontAwesomeIcon icon="rupee-sign" size="8px" />
-                                                {vale.prize}</strong></h3>
+                                                    <FontAwesomeIcon icon="rupee-sign" size="8px" />
+                                                    {vale.prize}</strong></h3>
                                                 <span>{vale.name}</span>
                                                 <i><img src={star} /></i>
                                                 <i><img src={star} /></i>

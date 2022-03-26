@@ -5,6 +5,7 @@ import email from "../assets/icon/email.png"
 import loc from "../assets/icon/loc.png"
 import logo from "../assets/images/logo.png"
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
                                     <div className="center-desk">
                                         <div className="logo">
                                             {/* <a href="javascript:;"><img src={logo} alt="#"/></a> */}
-                                            <Link to="/"><img src={logo} alt="#"/></Link>
+                                            <Link to="/"><img src={logo} alt="#" /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -35,10 +36,12 @@ export default function Header() {
                                                 <li><Link to="/contactus">Contact Us</Link></li>
                                                 <li><Link to="/login">Login</Link></li>
                                                 <li><Link to="/signup">Signup</Link></li>
-                                                <li className="last">
+
+                                                {/* <li className="last">
                                                     <a><img src={search_icon} alt="icon"/></a>
-                                                </li>
+                                                </li> */}
                                             </ul>
+
                                         </nav>
                                     </div>
                                 </div>
