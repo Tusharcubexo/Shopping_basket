@@ -1,11 +1,17 @@
 import { useState } from "react"
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
+import { runbaseApi } from "./api/base";
 
 export default function Signup() {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [name, setName] = useState("")
-    const [phone, setPhone] = useState("")
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const navigate = useNavigate();
+    // console.log(navigate);
 
     console.log(name);
     console.log(email);
@@ -19,24 +25,40 @@ export default function Signup() {
     //     phone1 : phone
     // }
     // console.log(register_details);
-
-    function register(){
-        // alert("kjhdhkh")
-        // axios.post("https://e-shopper-backend.herokuapp.com/api/user/", {
-        //     name:name,
-        //     email:email,
-        //     mobile_number:phone,
-        //     password:password
-
-        // })
-        // .then((response) => {
-        //     console.log(response);
-        //     console.log("200");
-        //     })
+    toast.configure()
+    function register(e){
+        e.preventDefault();
+        setEmail("");
+        setPassword("");
+        setName("");
+        setPhone("");
         
-        // .catch(error => {
-        //     console.log(error.response.data.error)
-        //     })
+        // alert("kjhdhkh")
+        axios.post("https://e-shopper-backend.herokuapp.com/api/user/", {
+            name:name,
+            email:email,
+            mobile_number:phone,
+            password:password
+
+        })
+        .then((response) => {
+            console.log(response);
+            console.log("200");
+            toast.success("Welcome",{
+                position: "bottom-right",
+                autoClose: 3000
+                });
+
+            navigate('/login')
+
+            })
+        
+        .catch(error => {
+            toast.error("Please enter valid input ",{
+                position: "bottom-right", autoClose:3000
+                });
+            console.log(error.response.data.error)    
+            })
     }
     
 
@@ -53,24 +75,24 @@ export default function Signup() {
                             <form className="main_form">
                                 <div className="row">
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <input className="form-control" placeholder="Your name" type="text" name="Your Name" required onChange={(e)=>setName(e.target.value)} />
+                                        <input className="form-control" placeholder="Your name" type="text" value={name} name="Your Name" required onChange={(e)=>setName(e.target.value)} />
                                     </div>
                                     <br />
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <input className="form-control" placeholder="Email" type="email" name="Email" pattern="[^ @]*@[^ @]*" required onChange={(e)=>setEmail(e.target.value)} />
+                                        <input className="form-control" placeholder="Email" type="email" value={email} name="Email" pattern="[^ @]*@[^ @]*" required onChange={(e)=>setEmail(e.target.value)} />
                                     </div>
                                     
                                     {/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <input className="form-control" placeholder="Re-type Password" type="password" name="Password" required />
                                     </div> */}
                                     <div className=" col-md-6">
-                                        <input className="form-control" placeholder="Phone" type="number" name="Phone" min={0}
+                                        <input className="form-control" placeholder="Phone" type="number" value={phone} name="Phone" min={0}
                                             onInput={(e) =>setPhone( e.target.value = e.target.value.slice(0, 10))}
 
                                             maxLength={10} required />
                                     </div>
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <input className="form-control" placeholder="Password" type="password" name="Password" required onChange={(e)=>setPassword(e.target.value)} />
+                                        <input className="form-control" placeholder="Password" type="password" value={password} name="Password" required onChange={(e)=>setPassword(e.target.value)} />
                                     </div>
                                     {/* <div className="col-md-2">
                                         <input type="radio" name="radiogroup1" id="rd1" />
@@ -98,6 +120,9 @@ export default function Signup() {
 export function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate();
+
+    // console.log(navigate);
     
 
     console.log(email);
@@ -109,20 +134,47 @@ export function Login() {
     // }
     // console.log(login_details);
 
-    function loginuser(){
-        alert("kjhdhkh")
+    toast.configure()
+    function loginuser(e){
+        e.preventDefault();
+        setEmail("");
+        setPassword("");
+
+        // runbaseApi("post", "token/", {
+        //     data: login_details, 
+        // });
+        
         axios.post("https://e-shopper-backend.herokuapp.com/api/token/", {
             email:email,
-            password:password        
+            password:password
+            // data:login_details
         })
-        .then((response) => {
+        .then((response) => {    
             console.log(response);
-            console.log("working");
+            toast.success("Welcome",{
+                position: "bottom-right",
+                autoClose: 3000
+                });
+
+            navigate('/')
+
+            }) 
+        .catch(error => {   
+            console.log(error.response.data.error)
+            toast.error("Worng Email or password",{
+                position: "bottom-right", autoClose:3000
+                });
             })
         
-        .catch(error => {
-            console.log(error.response.data.error)
-            })
+        // toast.info('🦄 Wow so easy!', {
+        //     position: "bottom-right",
+        //     autoClose: 5000,
+        //     hideProgressBar: false,
+        //     closeOnClick: true,
+        //     pauseOnHover: true,
+        //     draggable: true,
+        //     progress: undefined,
+        //     });
     }
 
 
@@ -138,14 +190,14 @@ export function Login() {
                             <form className="main_form">
                                 <div className="row">
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <input className="form-control" placeholder="Your Email" type="email" name="Email" pattern="[^ @]*@[^ @]*" required onChange={(e)=>setEmail(e.target.value)} />
+                                        <input className="form-control" placeholder="Your Email" type="email" value={email} name="Email" pattern="[^ @]*@[^ @]*" required onChange={(e)=>setEmail(e.target.value)} />
                                     </div>
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <input className="form-control" placeholder="Password" type="password" name="Password" required onChange={(e)=>setPassword(e.target.value)} />
+                                        <input className="form-control" placeholder="Password" type="password" value={password} name="Password" required onChange={(e)=>setPassword(e.target.value)} />
                                     </div>
                                     <a href="#">Forgot Password</a>
                                     <div className=" col-md-12">
-                                        <button className="send" onClick={loginuser}>Login</button>
+                                        <button className="send"  onClick={loginuser}>Login</button>
                                     </div>
                                 </div>
                             </form>
