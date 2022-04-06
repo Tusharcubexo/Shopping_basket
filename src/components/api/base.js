@@ -2,7 +2,7 @@ import axios from "axios";
 // const baseurl= process.env.REACT_APP_URL
 const baseurl = "https://e-shopper-backend.herokuapp.com/api/"
 
-export async function runbaseApi(method, url, data){
+export async function loginApi(method, url, data){
     var config = {
         method: method,
         url: baseurl + url,

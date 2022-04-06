@@ -18,12 +18,12 @@ function Boady() {
                                         <br /> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
                                     
                                     <Link className="buynow" to="/products">See now</Link>
-                                    <ul className="social_icon">
+                                    {/* <ul className="social_icon">
                                         <li> <a href="#"><i className="fa fa-facebook-f" /></a></li>
                                         <li> <a href="#"><i className="fa fa-twitter" /></a></li>
                                         <li> <a href="#"><i className="fa fa-instagram" /></a></li>
-                                    </ul>
-                                </div>
+                                    </ul> */}
+                                {/* </div>
                             </div>
                         </div>
                         <div className="carousel-item">
@@ -34,13 +34,13 @@ function Boady() {
                                     <h1>up to 25% Flat Sale</h1>
                                     <p>It is a long established fact that a reader will be distracted by the readable content
                                         <br /> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-                                    <a className="buynow" href="#">Buy Now</a>
-                                    <ul className="social_icon">
+                                    <a className="buynow" href="#">Buy Now</a> */}
+                                    {/* <ul className="social_icon">
                                         <li> <a href="#"><i className="fa fa-facebook-f" /></a></li>
                                         <li> <a href="#"><i className="fa fa-twitter" /></a></li>
                                         <li> <a href="#"><i className="fa fa-instagram" /></a></li>
-                                    </ul>
-                                </div>
+                                    </ul> */}
+                                {/* </div>
                             </div>
                         </div>
                         <div className="carousel-item">
@@ -51,12 +51,12 @@ function Boady() {
                                     <h1>up to 25% Flat Sale</h1>
                                     <p>It is a long established fact that a reader will be distracted by the readable content
                                         <br /> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-                                    <a className="buynow" href="#">Buy Now</a>
-                                    <ul className="social_icon">
+                                    <a className="buynow" href="#">Buy Now</a> */}
+                                    {/* <ul className="social_icon">
                                         <li> <a href="#"><i className="fa fa-facebook-f" /></a></li>
                                         <li> <a href="#"><i className="fa fa-twitter" /></a></li>
                                         <li> <a href="#"><i className="fa fa-instagram" /></a></li>
-                                    </ul>
+                                    </ul> */}
                                 </div>
                             </div>
                         </div>

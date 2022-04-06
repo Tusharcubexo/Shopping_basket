@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import search_icon from "../assets/images/search_icon.png"
 import call from "../assets/icon/call.png"
 import email from "../assets/icon/email.png"
@@ -6,9 +6,82 @@ import loc from "../assets/icon/loc.png"
 import logo from "../assets/images/logo.png"
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Logout } from './loginsignup'
+import { useNavigate } from 'react-router-dom';
 
 
-export default function Header() {
+import React, { useState, useEffect } from 'react'
+import Loader from "react-js-loader";
+
+
+
+export default function Header(props) {
+    // const [redirect, setRedirect] = useState(false)
+    const [isUserLogin, setIsUserLogin] = useState(false);
+    const [userAuthToken, setUserAuthToken] = useState("");
+    // const [isloading, setIsloading] = useState(true);
+
+
+    console.log(userAuthToken);
+    console.log(isUserLogin)
+
+    // props.userloginData
+
+    // const navigate = useNavigate();
+
+    // var redirect = false
+    // var isuserlogdata = props.userloginData
+    // console.log(isuserlogdata);
+
+
+    // console.log(props.usedetails);
+    // var user = props.usedetails  
+    // console.log(user);
+
+    useEffect(() => {
+
+        setUserAuthToken(props.userdetailtoken)
+        console.log(userAuthToken);
+
+        setIsUserLogin(props.userloginData);
+        console.log(isUserLogin);
+        // setIsloading(false);
+        // setInterval(() => {
+        // setUserAuthToken(props.userdetailtoken)
+        // console.log(userAuthToken);
+
+        // setIsUserLogin(props.userloginData);
+        // console.log(isUserLogin);
+        // }, [])
+    }, [props.userdetailtoken]);
+
+    function logout() {
+        localStorage.clear("userlogin");
+        setIsUserLogin(false)
+        console.log(localStorage);
+
+
+
+        sessionStorage.clear("token");
+        console.log(sessionStorage);
+        setUserAuthToken(null)
+        console.log(userAuthToken);
+
+        // setRedirect(true)
+        // redirect = true
+        // if (redirect === true) {
+        //     return console.log("working");
+
+        // } else {
+        //     return console.log("not cleared");
+        // }
+
+
+
+        // localStorage.clear()
+        // // window.location.reload(false);
+        // console.log(localStorage);
+    }
     return (
         <>
             <header>
@@ -20,7 +93,7 @@ export default function Header() {
                                     <div className="center-desk">
                                         <div className="logo">
                                             {/* <a href="javascript:;"><img src={logo} alt="#"/></a> */}
-                                            <Link to="/"><img src={logo} alt="#" /></Link>
+                                            <Link to="/"><img src={logo} alt="po" /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -29,18 +102,35 @@ export default function Header() {
                                 <div className="menu-area">
                                     <div className="limit-box">
                                         <nav className="main-menu">
-                                            <ul className="menu-area-main">
-                                                <li className="active"><Link to="/">Home</Link></li>
-                                                <li><Link to="/about">About</Link></li>
-                                                <li><Link to="/products">Products</Link></li>
-                                                <li><Link to="/contactus">Contact Us</Link></li>
-                                                <li><Link to="/login">Login</Link></li>
-                                                <li><Link to="/signup">Signup</Link></li>
 
-                                                {/* <li className="last">
+                                            {
+                                                isUserLogin === true ? <ul className="menu-area-main">
+                                                    <li className="active"><Link to="/">Home</Link></li>
+                                                    <li><Link to="/about">About</Link></li>
+                                                    <li><Link to="/products">Products</Link></li>
+                                                    <li><Link to="/contactus">Contact Us</Link></li>
+                                                    <li><Link onClick={logout} to="/">Logout</Link></li>
+
+                                                    {/* <li className="last">
+                                                <a><img src={search_icon} alt="icon"/></a>
+                                            </li> */}
+                                                </ul> : <ul className="menu-area-main">
+                                                    <li className="active"><Link to="/">Home</Link></li>
+                                                    <li><Link to="/about">About</Link></li>
+                                                    <li><Link to="/products">Products</Link></li>
+                                                    <li><Link to="/contactus">Contact Us</Link></li>
+                                                    <li><Link to="/login">Login</Link></li>
+                                                    <li><Link to="/signup">Signup</Link></li>
+
+
+
+                                                    {/* <li className="last">
                                                     <a><img src={search_icon} alt="icon"/></a>
                                                 </li> */}
-                                            </ul>
+                                                </ul>
+
+                                            }
+
 
                                         </nav>
                                     </div>
@@ -57,6 +147,7 @@ export default function Header() {
                             </div> */}
                         </div>
                     </div>
+
                 </div>
 
             </header>

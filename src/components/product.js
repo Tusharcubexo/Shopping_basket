@@ -6,6 +6,7 @@ import Images from './img';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRupeeSign } from '@fortawesome/fontawesome-free-solid'
+import axios from 'axios';
 
 export default function Phonedetails() {
     // const [proddetails, setProddetails] = useState([]);
@@ -43,7 +44,7 @@ export default function Phonedetails() {
                             return (
                                 <>
                                     <div className="left-column">
-                                        <Images pic={vale.img} />
+                                        <Images pic={vale.img} />   
                                         {/* <img data-image="red" className="active" src={vale.img} alt='img' /> */}
                                     </div>
                                     {/* Right Column */}

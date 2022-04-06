@@ -9,6 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faIndianRupee } from '@fortawesome/free-solid-svg-icons'
 // import { faIndianRupeeSign } from '@fortawesome/free-solid-svg-icons'
 import { faRupeeSign } from '@fortawesome/fontawesome-free-solid'
+import Loadercomponent from './loader';
+import Loader from "react-js-loader";
+
 
 export default function Productbrand() {
     const [stock, setStock] = useState(6);
@@ -16,6 +19,7 @@ export default function Productbrand() {
     const [pd, setPd] = useState([]);
     const [onbtn, setBtn] = useState(true)
     const [complitedata, setComplitedata] = useState("")
+    const [isloading, setIsloading] = useState(false)
 
     useEffect(() => {
         console.log(stock);
@@ -33,6 +37,13 @@ export default function Productbrand() {
 
         }
     }, [stock]);
+
+    // useEffect(()=>{
+
+    //     setTimeout(() => {
+    //         setIsloading(true);
+    //     }, 1000);
+    // })
     console.log(pd)
     function newset() {
         for (var i = 0; i < pd.length; i++) {
@@ -43,6 +54,7 @@ export default function Productbrand() {
 
     return (
         <>
+        
             <div className="brand">
                 <div className="container">
                     <div className="row">
@@ -107,10 +119,9 @@ export default function Productbrand() {
 
                                 </div>
                             </div> */}
+                            
                             <div className="col-md-12" >
-                                {onbtn ? <button className="read-more" onClick={() => setStock(stock + 3)} id="btnp">See More</button> : ''
-
-                                }
+                                {onbtn ? <button className="read-more" onClick={() => setStock(stock + 3)} id="btnp">See More</button> : '' }
 
 
                             </div>
