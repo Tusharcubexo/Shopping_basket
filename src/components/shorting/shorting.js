@@ -5,30 +5,37 @@ import { useEffect, useState } from 'react';
 export default function Short() {
     const [data, setData] = useState([])
     const [sortType, setSortType] = useState("")
-    // var data = [];
-
+    const [statusType, setStatusType] = useState("")
+    const [paymentstatusType, setPaymentStatusType] = useState("")
+ 
     useEffect(async () => {
-       await  axios.get("https://retoolapi.dev/tg9mwK/data")
+        await axios.get("https://retoolapi.dev/tg9mwK/data")
             .then((res) => {
                 console.log(res);
                 setData(res.data);
                 console.log(data);
             })
-    },[])
+    }, [])
 
-    const sortThe = (val) =>{
-        var toBeSort =data;
-        const datas = toBeSort.sort((a, b) => a.Price > b.Price);
-        setData(datas)
-        // console.log("DDDDDDDDDDDDDDDDDDDDDDDDD???????????")
-        console.log(sortType)
-        console.log(data)
+    const sortThe = (valu, status_t) => {
+        var toBeSort = [].concat(data).filter(task=>task.Status==status_t)
+        console.log(toBeSort);
+        setData(toBeSort);
+       
+        
+        console.log(data);
 
+        // data.filter()
+        // const datas = data.sort((a, b) => a[data] > b[data])
+        // setData(datas)
+        // console.log(data)
+        // console.log(datas)
     }
 
-    useEffect(()=>{
-       sortThe();
-    },[sortType]);
+    useEffect(() => {
+        sortThe(sortType, statusType );
+    }, [sortType, statusType]);
+
 
     // let newdata = data;
 
@@ -48,19 +55,34 @@ export default function Short() {
 
     return (
         <>
+            <br />
             <div>
                 <label htmlFor="sort">Short by-:</label>
-                <select name="valee" id="dataa" onChange={(e) =>{  sortThe();}}>
-                    <option value="First name">First name</option>
-                    <option value="Last name">Last name</option>
-                    <option value="Status">Status</option>
-                    <option value="payment status">payment status</option>
-                    <option value="start date">start date</option>
-                    <option value="End Date">End Date</option>
+                <select name="valee" id="dataa" onChange={(e) => setSortType(e.target.value)}>
+                    <option value="First Name">First Name</option>
+                    <option value="Last Name">Last Name</option>
                     <option value="Price">Price</option>
                 </select>
                 {console.log(sortType)}
+
+                <label htmlFor="sort" style={{ marginLeft: "50px" }}> Status-: </label>
+                <select name="status" id="status" onChange={(e) => setStatusType(e.target.value)} >
+                    <option value="Shipped">Shipped</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="At Warehouse">At Warehouse</option>
+                    <option value="On Delivery Vehicle">On Delivery Vehicle</option>
+                    {console.log(statusType)}
+                </select>
+
+                <label htmlFor="sort" style={{ marginLeft: "50px" }}>Payment Status-: </label>
+                <select name="payment" id="payment" onChange={(e) => setPaymentStatusType(e.target.value)} >
+                    <option value="Credit">Credit</option>
+                    <option value="Debit">Debit</option>
+                    <option value="Invoice">Invoice</option>
+                    {console.log(paymentstatusType)}
+                </select>
             </div>
+
             <br />
 
 
@@ -82,7 +104,7 @@ export default function Short() {
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                     {data.map((vale) => {
                         return (
                             <tr>
