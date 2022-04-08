@@ -93,7 +93,7 @@ export default function Header(props) {
                                     <div className="center-desk">
                                         <div className="logo">
                                             {/* <a href="javascript:;"><img src={logo} alt="#"/></a> */}
-                                            <Link to="/"><img src={logo} alt="po" /></Link>
+                                            <Link to="/">Shopping Basket</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -109,6 +109,7 @@ export default function Header(props) {
                                                     <li><Link to="/about">About</Link></li>
                                                     <li><Link to="/products">Products</Link></li>
                                                     <li><Link to="/contactus">Contact Us</Link></li>
+                                                    <li><Link to="/short">Short</Link></li>
                                                     <li><Link onClick={logout} to="/">Logout</Link></li>
 
                                                     {/* <li className="last">
@@ -121,6 +122,8 @@ export default function Header(props) {
                                                     <li><Link to="/contactus">Contact Us</Link></li>
                                                     <li><Link to="/login">Login</Link></li>
                                                     <li><Link to="/signup">Signup</Link></li>
+                                                    <li><Link to="/short">Short</Link></li>
+
 
 
 

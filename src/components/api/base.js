@@ -2,7 +2,7 @@ import axios from "axios";
 // const baseurl= process.env.REACT_APP_URL
 const baseurl = "https://e-shopper-backend.herokuapp.com/api/"
 
-export async function loginApi(method, url, data){
+export default async function baseApi(method, url, data){
     var config = {
         method: method,
         url: baseurl + url,
@@ -12,10 +12,9 @@ export async function loginApi(method, url, data){
 
 
     axios(config)
-    .then((response) => {    
-        console.log(response);
-        
-
+    .then((res) => {    
+        console.log(res);
+        console.log("api is working"); 
     })
     .catch(error => {   
         console.log(error.response.data.error)

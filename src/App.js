@@ -21,6 +21,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 
 import Loader from "react-js-loader";
+import Short from "./components/shorting/shorting";
 
 function App() {
     const [isloading, setIsloading] = useState(true);
@@ -95,6 +96,7 @@ function App() {
                         <Route path="/contactus" element={<Contactuspage />} />
                         <Route path="/login" element={<Login update={setLog} />} />
                         <Route path="/signup" element={<Signup />} />
+                        <Route path="/short" element={<Short />} />
                         <Route path="/productDetails/:productid" element={<Phonedetails />} />
 
                     </Routes>

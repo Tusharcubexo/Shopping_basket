@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { loginApi } from "./api/base";
 import { clear } from "@testing-library/user-event/dist/clear";
 import { faPersonCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import { login } from "./api/login_signin_apis";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -37,24 +38,24 @@ export default function Signup() {
         setPhone("");
 
 
-        axios.post("https://e-shopper-backend.herokuapp.com/api/user/", register_details )
-        .then((response) => {
-            console.log(response);
-            console.log("200");
-            toast.success("Welcome",{
-                position: "bottom-right",
-                autoClose: 3000
+        axios.post("https://e-shopper-backend.herokuapp.com/api/user/", register_details)
+            .then((response) => {
+                console.log(response);
+                console.log("200");
+                toast.success("Welcome", {
+                    position: "bottom-right",
+                    autoClose: 3000
                 });
 
-            navigate('/login')
+                navigate('/login')
 
             })
 
-        .catch(error => {
-            toast.error("Please enter valid input ",{
-                position: "bottom-right", autoClose:3000
+            .catch(error => {
+                toast.error("Please enter valid input ", {
+                    position: "bottom-right", autoClose: 3000
                 });
-            console.log(error.response.data.error)    
+                console.log(error.response.data.error)
             })
     }
 
@@ -74,7 +75,7 @@ export default function Signup() {
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <input className="form-control" placeholder="Your name" type="text" value={name} name="Your Name" required onChange={(e) => setName(e.target.value)} />
                                     </div>
-                                    
+
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <input className="form-control" placeholder="Email" type="email" value={email} name="Email" pattern="[^ @]*@[^ @]*" required onChange={(e) => setEmail(e.target.value)} />
                                     </div>
@@ -82,14 +83,14 @@ export default function Signup() {
                                     {/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <input className="form-control" placeholder="Re-type Password" type="password" name="Password" required />
                                     </div> */}
-                                    
+
                                     <div className=" col-md-6">
                                         <input className="form-control" placeholder="Phone" type="number" value={phone} name="Phone" min={0}
                                             onInput={(e) => setPhone(e.target.value = e.target.value.slice(0, 10))}
 
                                             maxLength={10} required />
                                     </div>
-                                    
+
 
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <input className="form-control" placeholder="Password" type="password" value={password} name="Password" required onChange={(e) => setPassword(e.target.value)} />
@@ -143,50 +144,41 @@ export function Login(props) {
         setEmail("");
         setPassword("");
 
+        login(login_details);
+        console.log("pass login details");
 
-        // loginApi("post", "token/", login_details)
+        toast.success("Welcome", {
+            position: "bottom-right",
+            autoClose: 3000
+        });
+        
 
+        // axios.post("https://e-shopper-backend.herokuapp.com/api/token/", login_details)
+        //     .then((res) => {
+        //         console.log(res);
+        //         sessionStorage.setItem("token", res.data.access);
+        //         console.log(sessionStorage);
+        //         userlogin = true;
+        //         console.log(userlogin);
+        //         localStorage.setItem('userlogin', JSON.stringify(userlogin));
 
-        // runbaseApi("post", "token/", {
-        //     data: login_details, 
-        // });
-        // console.log(login_details);
-        axios.post("https://e-shopper-backend.herokuapp.com/api/token/", login_details)
-            .then((res) => {
-                console.log(res);
-                sessionStorage.setItem("token", res.data.access);
-                console.log(sessionStorage);
-                userlogin = true;
-                console.log(userlogin);
-                localStorage.setItem('userlogin', JSON.stringify(userlogin));
+        //         toast.success("Welcome", {
+        //             position: "bottom-right",
+        //             autoClose: 3000
+        //         });
 
-                toast.success("Welcome", {
-                    position: "bottom-right",
-                    autoClose: 3000
-                });
+        //        props.update()
 
-               props.update()
+        //         navigate('/')
+        //         // window.location.reload();
 
-                navigate('/')
-                // window.location.reload();
-
-            })
-            .catch(error => {
-                console.log(error.res.data.error)
-                toast.error("Worng Email or password", {
-                    position: "bottom-right", autoClose: 3000
-                });
-            })
-
-        // toast.info('🦄 Wow so easy!', {
-        //     position: "bottom-right",
-        //     autoClose: 5000,
-        //     hideProgressBar: false,
-        //     closeOnClick: true,
-        //     pauseOnHover: true,
-        //     draggable: true,
-        //     progress: undefined,
-        //     });
+        //     })
+        //     .catch(error => {
+        //         console.log(error.res.data.error)
+        //         toast.error("Worng Email or password", {
+        //             position: "bottom-right", autoClose: 3000
+        //         });
+        //     })
     }
 
 
