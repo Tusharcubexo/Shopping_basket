@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 import React, { useState, useEffect } from 'react'
 import Loader from "react-js-loader";
+import { NewFileForTesting } from "./newfile"
 
 
 
@@ -123,6 +124,7 @@ export default function Header(props) {
                                                     <li><Link to="/login">Login</Link></li>
                                                     <li><Link to="/signup">Signup</Link></li>
                                                     <li><Link to="/short">Short</Link></li>
+                                                    <NewFileForTesting />
 
 
 
