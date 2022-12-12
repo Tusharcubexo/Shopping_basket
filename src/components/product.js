@@ -1,13 +1,10 @@
-import { contains } from 'jquery';
+
 import { useParams } from 'react-router-dom';
 import '../assets/css/style-pd.css';
 import data from "./data/products.json"
 import Images from './img';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRupeeSign } from '@fortawesome/fontawesome-free-solid'
-import axios from 'axios';
-
 export default function Phonedetails() {
     // const [proddetails, setProddetails] = useState([]);
     // setProddetails(data.map(product => {
@@ -38,7 +35,7 @@ export default function Phonedetails() {
                 {/* Left Column / Headphones Image */}
                 {
                     data.products
-                        .filter(vale => vale.id == productid)
+                        .filter(vale => vale.id === productid)
                         .map(vale => {
 
                             return (
@@ -83,7 +80,7 @@ export default function Phonedetails() {
                                                     <button>Coiled</button>
                                                     <button>Long-coiled</button>
                                                 </div>
-                                                <a href="#">How to configurate your headphones</a>
+                                                <div>How to configurate your headphones</div>
                                             </div>
                                         </div>
                                         {/* Product Pricing */}
@@ -91,7 +88,7 @@ export default function Phonedetails() {
                                             <span>
                                                 <FontAwesomeIcon icon="rupee-sign" size="8px" />
                                                 {vale.prize}</span>
-                                            <a href="#" className="cart-btn">Add to cart</a>
+                                            <div  className="cart-btn">Add to cart</div>
                                         </div>
                                     </div>
                                 </>

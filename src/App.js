@@ -1,18 +1,15 @@
 import {
     BrowserRouter as Router,
     Routes,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 // import {Route} from route;
 import Home from "./components/home";
-import Allproducts from "./components/product";
-
 import './App.css';
 import { Aboutpage } from "./components/about";
 import Header from "./components/navbar";
 import Address from "./components/footer";
-import { Brandpage, Productpage } from "./components/brand";
+import { Productpage } from "./components/brand";
 import { Contactuspage } from "./components/contact";
 import Phonedetails from "./components/product";
 import Signup from "./components/loginsignup";
@@ -36,7 +33,7 @@ function App() {
         const is = JSON.parse(localStorage.getItem('userlogin'));
         const token = sessionStorage.getItem("token");
         if (is) {
-            setUserlogdata(is);
+            setUserlogdata(true);
             setAuthtoken(token);
             return true
         }
@@ -77,7 +74,7 @@ function App() {
             userdataApi();
         }
 
-    }, [userlogdata]);
+    }, []);
 
 
     return (

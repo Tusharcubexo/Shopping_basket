@@ -1,20 +1,6 @@
-// import React from 'react'
-import search_icon from "../assets/images/search_icon.png"
-import call from "../assets/icon/call.png"
-import email from "../assets/icon/email.png"
-import loc from "../assets/icon/loc.png"
-import logo from "../assets/images/logo.png"
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Logout } from './loginsignup'
-import { useNavigate } from 'react-router-dom';
-
-
 import React, { useState, useEffect } from 'react'
-import Loader from "react-js-loader";
 import { NewFileForTesting } from "./newfile"
-
-
 
 export default function Header(props) {
     // const [redirect, setRedirect] = useState(false)
@@ -26,19 +12,6 @@ export default function Header(props) {
     console.log(userAuthToken);
     console.log(isUserLogin)
 
-    // props.userloginData
-
-    // const navigate = useNavigate();
-
-    // var redirect = false
-    // var isuserlogdata = props.userloginData
-    // console.log(isuserlogdata);
-
-
-    // console.log(props.usedetails);
-    // var user = props.usedetails  
-    // console.log(user);
-
     useEffect(() => {
 
         setUserAuthToken(props.userdetailtoken)
@@ -46,14 +19,6 @@ export default function Header(props) {
 
         setIsUserLogin(props.userloginData);
         console.log(isUserLogin);
-        // setIsloading(false);
-        // setInterval(() => {
-        // setUserAuthToken(props.userdetailtoken)
-        // console.log(userAuthToken);
-
-        // setIsUserLogin(props.userloginData);
-        // console.log(isUserLogin);
-        // }, [])
     }, [props.userdetailtoken]);
 
     function logout() {
@@ -67,21 +32,6 @@ export default function Header(props) {
         console.log(sessionStorage);
         setUserAuthToken(null)
         console.log(userAuthToken);
-
-        // setRedirect(true)
-        // redirect = true
-        // if (redirect === true) {
-        //     return console.log("working");
-
-        // } else {
-        //     return console.log("not cleared");
-        // }
-
-
-
-        // localStorage.clear()
-        // // window.location.reload(false);
-        // console.log(localStorage);
     }
     return (
         <>

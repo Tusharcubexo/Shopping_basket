@@ -1,18 +1,9 @@
-import $ from 'jquery'
-import ReactDOM from 'react-dom';
 import data from "./data/products.json"
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import star from "../assets/images/star.png"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faIndianRupee } from '@fortawesome/free-solid-svg-icons'
-// import { faIndianRupeeSign } from '@fortawesome/free-solid-svg-icons'
-import { faRupeeSign } from '@fortawesome/fontawesome-free-solid'
-import Loadercomponent from './loader';
-import Loader from "react-js-loader";
-
-import ListBox from 'react-listbox';
 import 'react-listbox/dist/react-listbox.css';
 
 
@@ -21,13 +12,10 @@ export default function Productbrand() {
     // const [more_btn, setStock] = useState(6);
     const [pd, setPd] = useState([]);
     const [onbtn, setBtn] = useState(true)
-    const [complitedata, setComplitedata] = useState("")
-    const [isloading, setIsloading] = useState(false)
-
     useEffect(() => {
         console.log(stock);
         const total_lenth = data.products.length;
-        if (stock == total_lenth) {
+        if (stock === total_lenth) {
             setBtn(false)
 
         }
@@ -47,12 +35,12 @@ export default function Productbrand() {
     //     }, 1000);
     // })
     console.log(pd)
-    function newset() {
-        for (var i = 0; i < pd.length; i++) {
-            console.log(pd.details.phoneBrand);
-        }
+    // function newset() {
+    //     for (var i = 0; i < pd.length; i++) {
+    //         console.log(pd.details.phoneBrand);
+    //     }
 
-    }
+    // }
 
     return (
         <>
@@ -214,10 +202,10 @@ export function Productpage() {
                                                         <FontAwesomeIcon icon="rupee-sign" size="8px" />
                                                         {vale.prize}</strong></h3>
                                                     <span>{vale.name}</span>
-                                                    <i><img src={star} /></i>
-                                                    <i><img src={star} /></i>
-                                                    <i><img src={star} /></i>
-                                                    <i><img src={star} /></i>
+                                                    <i><img src={star} alt={1}/></i>
+                                                    <i><img src={star} alt={2}/></i>
+                                                    <i><img src={star} alt={3}/></i>
+                                                    <i><img src={star} alt={4}/></i>
                                                 </div>
                                             </div>
 
@@ -295,7 +283,7 @@ export function Productpage() {
                                     </div>
                                 </div> */}
                                 <div className="col-md-12">
-                                    <a className="read-more">See More</a>
+                                    <div className="read-more">See More</div>
                                 </div>
                             </div>
                         </div>

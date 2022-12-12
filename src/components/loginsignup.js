@@ -1,9 +1,8 @@
 import { useState } from "react"
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-import { runbaseApi } from "./api/base";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -195,7 +194,7 @@ export function Login() {
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <input className="form-control" placeholder="Password" type="password" value={password} name="Password" required onChange={(e)=>setPassword(e.target.value)} />
                                     </div>
-                                    <a href="#">Forgot Password</a>
+                                    <div>Forgot Password</div>
                                     <div className=" col-md-12">
                                         <button className="send"  onClick={loginuser}>Login</button>
                                     </div>

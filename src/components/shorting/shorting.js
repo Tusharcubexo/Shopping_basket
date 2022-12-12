@@ -7,22 +7,25 @@ export default function Short() {
     const [sortType, setSortType] = useState("")
     const [statusType, setStatusType] = useState("")
     const [paymentstatusType, setPaymentStatusType] = useState("")
- 
-    useEffect(async () => {
-        await axios.get("https://retoolapi.dev/tg9mwK/data")
-            .then((res) => {
-                console.log(res);
-                setData(res.data);
-                console.log(data);
-            })
+
+    useEffect(() => {
+        const apidata = async () => {
+            await axios.get("https://retoolapi.dev/tg9mwK/data")
+                .then((res) => {
+                    console.log(res);
+                    setData(res.data);
+                    console.log(data);
+                })
+        }
+        apidata()
     }, [])
 
     const sortThe = (valu, status_t) => {
-        var toBeSort = [].concat(data).filter(task=>task.Status==status_t)
+        var toBeSort = [].concat(data).filter(task => task.Status == status_t)
         console.log(toBeSort);
         setData(toBeSort);
-       
-        
+
+
         console.log(data);
 
         // data.filter()
@@ -33,7 +36,7 @@ export default function Short() {
     }
 
     useEffect(() => {
-        sortThe(sortType, statusType );
+        sortThe(sortType, statusType);
     }, [sortType, statusType]);
 
 

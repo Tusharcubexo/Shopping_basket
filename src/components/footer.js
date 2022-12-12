@@ -20,11 +20,11 @@ function Address() {
                   </ul> */}
                   <div className="menu-bottom">
                     <ul className="link">
-                      <li> <a href="#">Home</a></li>
-                      <li> <a href="#">About</a></li>
-                      <li> <a href="#">Brand </a></li>
-                      <li> <a href="#">Specials</a></li>
-                      <li> <a href="#"> Contact us</a></li>
+                      <li> Home</li>
+                      <li> About</li>
+                      <li> Brand </li>
+                      <li> Specials</li>
+                      <li>  Contact us</li>
                     </ul>
                   </div>
                 </div>
