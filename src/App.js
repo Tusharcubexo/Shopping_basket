@@ -74,7 +74,7 @@ function App() {
             userdataApi();
         }
 
-    }, []);
+    }, [userlogdata]);
 
 
     return (
