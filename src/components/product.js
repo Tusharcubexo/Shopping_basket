@@ -35,7 +35,7 @@ export default function Phonedetails() {
                 {/* Left Column / Headphones Image */}
                 {
                     data.products
-                        .filter(vale => vale.id === productid)
+                        .filter(vale => vale.id == productid)
                         .map(vale => {
 
                             return (
